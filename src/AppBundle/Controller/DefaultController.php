@@ -26,10 +26,6 @@ class DefaultController extends Controller
         10/*limit per page*/
     );
     
-        $message = new Message();
-        echo '<pre>';
-        print_r($pagination);
-        echo '</pre>';
         
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
