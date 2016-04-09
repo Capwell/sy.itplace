@@ -28,9 +28,8 @@ class WorkerInitCommand extends ContainerAwareCommand
     {
         $em = $this->getContainer()->get('doctrine.orm.entity_manager');
         $url = 'https://api.github.com/repos/symfony/symfony/commits';
-
         $client = new Client();
-        $res = $client->request('GET', $url);
+        $res = $client->request('GET', $url, ['verify' => false]);
 
 
         if($res->getStatusCode()==200){
