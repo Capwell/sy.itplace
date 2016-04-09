@@ -53,7 +53,7 @@ class WorkerInitCommand extends ContainerAwareCommand
                 $em->persist($messageModel);
                 $em->flush();
 
-                
+
 
             }
         }
