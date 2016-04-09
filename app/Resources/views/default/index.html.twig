@@ -4,12 +4,12 @@
     <div id="wrapper">
         <div id="container">
             <div id="status">
-                <table>
+                <table class='table'>
                     <thead >
                         <tr>
-                            <th>id
-                            </th>
                             <th>hash
+                            </th>
+                            <th>
                             </th>
                             <th>date
                             </th>
@@ -24,8 +24,8 @@
                     <tbody>
                         {% for article in pagination %}
                         <tr {% if loop.index is odd %}class="color"{% endif %}>
-                            <td>{{ article.id }}</td>
                             <td>{{ article.hash }}</td>
+                            <td><img src="{{ path('hash',{'hash': article.hash}) }}" ></td>
                             <td>{{ article.date | date('Y-m-d') }}</td>
                             <td>{{ article.author }}</td>
                             <td>{{ article.email }}</td>
